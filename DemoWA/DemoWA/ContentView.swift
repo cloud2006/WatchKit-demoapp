@@ -9,25 +9,44 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var counter = 0
+    let connectivity = iOSConnectivity.shared
     var body: some View {
         VStack {
-            // Display the counter value
             Text("Counter: \(counter)")
                 .font(.title)
                 .padding()
-
-            // Button to increment the counter
-            Button(action: {
-                counter += 1  // Increment the counter
-            }) {
-                Text("Increase Counter")
-                    .padding()
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .cornerRadius(8)
+            HStack {
+                Button(action: {
+                    counter += 1  // Increment the counter
+                    connectivity.sendInt(counter)
+                }) {
+                    Text("+")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(4)
+                }
+                
+                Button(action: {
+                    counter -= 1  // Decrement the counter
+                    connectivity.sendInt(counter)
+                }) {
+                    Text("-")
+                        .padding()
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(4)
+                }
             }
         }
         .padding()
+        .onAppear {
+            connectivity.counterUpdated = { newCounter in
+                DispatchQueue.main.async {
+                    self.counter = newCounter
+                }
+            }
+        }
     }
 }
 
