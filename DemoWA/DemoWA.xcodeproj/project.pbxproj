@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DA6315C32D05AEE00060F9E9 /* WatchDemoWA Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = DA6315B62D05AEDE0060F9E9 /* WatchDemoWA Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DA9C0A3E2D08883B001955FC /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9C0A3D2D08883B001955FC /* WidgetKit.framework */; };
+		DA9C0A402D08883B001955FC /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA9C0A3F2D08883B001955FC /* SwiftUI.framework */; };
+		DA9C0A492D08883D001955FC /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = DA9C0A3B2D08883B001955FC /* MonthlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -17,6 +20,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = DA6315B52D05AEDE0060F9E9;
 			remoteInfo = "WatchDemoWA Watch App";
+		};
+		DA9C0A472D08883D001955FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DA63155C2D00A70B0060F9E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA9C0A3A2D08883B001955FC;
+			remoteInfo = MonthlyWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -32,11 +42,25 @@
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA9C0A4A2D08883D001955FC /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DA9C0A492D08883D001955FC /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		DA6315642D00A70B0060F9E9 /* DemoWA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoWA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6315B62D05AEDE0060F9E9 /* WatchDemoWA Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WatchDemoWA Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9C0A3B2D08883B001955FC /* MonthlyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonthlyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA9C0A3D2D08883B001955FC /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		DA9C0A3F2D08883B001955FC /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -46,6 +70,13 @@
 				DemoWAApp.swift,
 			);
 			target = DA6315B52D05AEDE0060F9E9 /* WatchDemoWA Watch App */;
+		};
+		DA9C0A4E2D08883D001955FC /* Exceptions for "MonthlyWidget" folder in "MonthlyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = DA9C0A3A2D08883B001955FC /* MonthlyWidgetExtension */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -61,6 +92,14 @@
 		DA6315B72D05AEDE0060F9E9 /* WatchDemoWA Watch App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = "WatchDemoWA Watch App";
+			sourceTree = "<group>";
+		};
+		DA9C0A412D08883B001955FC /* MonthlyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				DA9C0A4E2D08883D001955FC /* Exceptions for "MonthlyWidget" folder in "MonthlyWidgetExtension" target */,
+			);
+			path = MonthlyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -80,6 +119,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA9C0A382D08883B001955FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA9C0A402D08883B001955FC /* SwiftUI.framework in Frameworks */,
+				DA9C0A3E2D08883B001955FC /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +136,8 @@
 			children = (
 				DA6315662D00A70B0060F9E9 /* DemoWA */,
 				DA6315B72D05AEDE0060F9E9 /* WatchDemoWA Watch App */,
+				DA9C0A412D08883B001955FC /* MonthlyWidget */,
+				DA9C0A3C2D08883B001955FC /* Frameworks */,
 				DA6315652D00A70B0060F9E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,8 +147,18 @@
 			children = (
 				DA6315642D00A70B0060F9E9 /* DemoWA.app */,
 				DA6315B62D05AEDE0060F9E9 /* WatchDemoWA Watch App.app */,
+				DA9C0A3B2D08883B001955FC /* MonthlyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		DA9C0A3C2D08883B001955FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA9C0A3D2D08883B001955FC /* WidgetKit.framework */,
+				DA9C0A3F2D08883B001955FC /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,10 +195,12 @@
 				DA6315B22D05AEDE0060F9E9 /* Sources */,
 				DA6315B32D05AEDE0060F9E9 /* Frameworks */,
 				DA6315B42D05AEDE0060F9E9 /* Resources */,
+				DA9C0A4A2D08883D001955FC /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DA9C0A482D08883D001955FC /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				DA6315B72D05AEDE0060F9E9 /* WatchDemoWA Watch App */,
@@ -149,6 +211,28 @@
 			productName = "WatchDemoWA Watch App";
 			productReference = DA6315B62D05AEDE0060F9E9 /* WatchDemoWA Watch App.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DA9C0A3A2D08883B001955FC /* MonthlyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA9C0A4D2D08883D001955FC /* Build configuration list for PBXNativeTarget "MonthlyWidgetExtension" */;
+			buildPhases = (
+				DA9C0A372D08883B001955FC /* Sources */,
+				DA9C0A382D08883B001955FC /* Frameworks */,
+				DA9C0A392D08883B001955FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				DA9C0A412D08883B001955FC /* MonthlyWidget */,
+			);
+			name = MonthlyWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = MonthlyWidgetExtension;
+			productReference = DA9C0A3B2D08883B001955FC /* MonthlyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -164,6 +248,9 @@
 						CreatedOnToolsVersion = 16.1;
 					};
 					DA6315B52D05AEDE0060F9E9 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					DA9C0A3A2D08883B001955FC = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
@@ -184,6 +271,7 @@
 			targets = (
 				DA6315632D00A70B0060F9E9 /* DemoWA */,
 				DA6315B52D05AEDE0060F9E9 /* WatchDemoWA Watch App */,
+				DA9C0A3A2D08883B001955FC /* MonthlyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -197,6 +285,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		DA6315B42D05AEDE0060F9E9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DA9C0A392D08883B001955FC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -220,6 +315,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		DA9C0A372D08883B001955FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -227,6 +329,11 @@
 			isa = PBXTargetDependency;
 			target = DA6315B52D05AEDE0060F9E9 /* WatchDemoWA Watch App */;
 			targetProxy = DA6315C12D05AEE00060F9E9 /* PBXContainerItemProxy */;
+		};
+		DA9C0A482D08883D001955FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA9C0A3A2D08883B001955FC /* MonthlyWidgetExtension */;
+			targetProxy = DA9C0A472D08883D001955FC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -470,6 +577,66 @@
 			};
 			name = Release;
 		};
+		DA9C0A4B2D08883D001955FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 636693BZU3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonthlyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonthlyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.DemoWA.watchkitapp.MonthlyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Debug;
+		};
+		DA9C0A4C2D08883D001955FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 636693BZU3;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonthlyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonthlyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.DemoWA.watchkitapp.MonthlyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.6;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -496,6 +663,15 @@
 			buildConfigurations = (
 				DA6315C52D05AEE00060F9E9 /* Debug */,
 				DA6315C62D05AEE00060F9E9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DA9C0A4D2D08883D001955FC /* Build configuration list for PBXNativeTarget "MonthlyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA9C0A4B2D08883D001955FC /* Debug */,
+				DA9C0A4C2D08883D001955FC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

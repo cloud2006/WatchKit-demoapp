@@ -21,6 +21,13 @@
 	•	Open the File Inspector.
 	•	In the Target Membership section, check the box for your Watch App target (e.g., #WatchAppName Watch App).
 
-    If your app needs to sync data between iPhone and Watch, explore WatchConnectivity. Example:
+    If app needs to sync data between iPhone and Watch, explore WatchConnectivity. Example:
     WCSession.default.sendMessage(["key": "value"], replyHandler: nil, errorHandler: nil)
 
+Widgets and complications
+1. To add complication just create widget for apple watch and set @Environment(\.widgetFamily) var family which you can switch and create different complications type.
+2. On Apple Watch, the watch app and the widget (or complication) are separate processes, even though they are installed on the same device. Due to the sandboxed nature of these processes, sharing data directly via something like @EnvironmentObject or in-memory objects isn’t possible. Instead, data must be shared through persistent or observable mechanisms.
+Use Combine with a Centralized Data Store
+If app frequently updates data, you can use Combine to notify changes to shared data. This won’t work directly across the app-widget boundary but works well internally within the watch app or widget.
+
+For sharing updates between the watch app and widget, persist changes to a shared file or UserDefaults (App Group), then trigger a WidgetCenter.reloadAllTimelines() to fetch updates.
